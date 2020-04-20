@@ -42,6 +42,7 @@ const TypographySecondary = styled(Typography)({
 })
 
 const Text = styled('p')({
+  fontSize: '1.2em',
   color: '#fff',
   textAlign: 'center',
   maxWidth: '700px',
