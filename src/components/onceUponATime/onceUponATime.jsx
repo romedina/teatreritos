@@ -7,7 +7,7 @@ const OnceUponATime = props => {
   return (
     <Content>
       <TypographyWhite align='center'>Nuestra acadenia</TypographyWhite>
-      <TypographyTitle align='center'>ERASE UNA VEZ..</TypographyTitle>
+      <TypographyTitle align='center'>ERASE UNA VEZ...</TypographyTitle>
       <TypographySecondary align='center'>(Transmisión en vivo)</TypographySecondary>
       <Text>
       Cada semana un narrador llevará a los teatreritos –sin dejar su hogar– a recorrer lugares
