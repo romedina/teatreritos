@@ -4,7 +4,7 @@ import { Grid, ButtonBase, Typography } from '@material-ui/core'
 
 const Classes = props => {
   return (
-    <Container>
+    <Container id='classes'>
         <Content container justify='center' alignItems='center' spacing={2}>
         <Grid item xs={12}>
           <TypographyStyled variant='h3' align='center' >Clases</TypographyStyled>

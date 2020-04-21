@@ -5,16 +5,16 @@ import VideoList from './videloList'
 
 const OnceUponATime = props => {
   return (
-    <Content>
-      <TypographyWhite align='center'>Nuestra acadenia</TypographyWhite>
+    <Content id='academia'> 
+      <TypographyWhite align='center'>Nuestra academia</TypographyWhite>
       <TypographyTitle align='center'>ERASE UNA VEZ...</TypographyTitle>
       <TypographySecondary align='center'>(Transmisión en vivo)</TypographySecondary>
       <Text>
-      Cada semana un narrador llevará a los teatreritos –sin dejar su hogar– a recorrer lugares
-      fantásticos mientras recrean historias emocionantes dando vida a diferentes personajes que
-      alimentarán sus dotes actorales. La creatividad será fundamental para que vistan y caractericen a su personaje utilizando solo aquello que tienen en casa.
+        Cada semana un narrador llevará a los teatreritos –sin dejar su hogar– a recorrer lugares
+        fantásticos mientras recrean historias emocionantes dando vida a diferentes personajes que
+        alimentarán sus dotes actorales. La creatividad será fundamental para que vistan y caractericen a su personaje utilizando solo aquello que tienen en casa.
       </Text>
-      <VideoList />
+      <VideoList {...props} section='primary'/>
     </Content>
   )
 }

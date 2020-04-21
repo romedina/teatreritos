@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@material-ui/core/styles'
 import { Typography } from '@material-ui/core' 
-import VideoList from './videloList'
+import VideoList from '../onceUponATime/videloList'
 
 const OnceUponATime = props => {
   return (
@@ -11,7 +11,7 @@ const OnceUponATime = props => {
       Semanalmente los teatreritos montarán una coreografía que enriquecerá sus habilidades de baile,
       retención, coordinación y dominio del escenario. Su cuerpo desarrollará fuerza, elasticidad, agilidad, memoria y actitud.
       </Text>
-      <VideoList />
+      <VideoList {...props} section='secondary' />
     </Content>
   )
 }

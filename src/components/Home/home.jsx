@@ -14,10 +14,10 @@ const useStyles = makeStyles(homeStyles);
 export const Home = () => {
 
     const classes = useStyles();
-    console.log(left)
+
     return (
         <React.Fragment>
-            <div className={classes.back}>
+            <div className={classes.back} id='home'>
                 <div className={classes.pattern}>
                     <div className={classes.floor}>
                         <img className={classes.floorImg} src={`${floor}`} alt="telon izquiedo" />

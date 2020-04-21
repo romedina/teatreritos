@@ -39,12 +39,12 @@ export const BeOrNotBe = () => {
 
     return (
         <React.Fragment>
-            <Box className={classes.container} pt={5}>
+            <Box className={classes.container} pt={5} id='be'>
                 <Grid container justify='center' alignItems='center'>
 
 
                     <Grid item xs={12} md={7}>
-                        <Box pt={10} pl={10} pr={10} pb={5}>
+                        <Box pt={10} pl={{md: 10, xs: 3}} pr={{md: 10, xs: 3}}  pb={5}>
                             <Typography gutterBottom className={classes.whiteType} align='left' variant='h4'>Ser o no ser teatrerito,<br /> esa es la cuestión...</Typography>
                             <Typography className={classes.darkOrangeType}>A través del juego, el teatro y la danza los teatreritos se
                             entretienen mientras desarrollan nuevas habilidades que los
@@ -52,11 +52,11 @@ export const BeOrNotBe = () => {
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={5}>
-                        <img className={classes.geometrias} src={geometrias} alt='geometrias teatreritos' />
+                        <img style={{display: 'block', margin: 'auto'}} className={classes.geometrias} src={geometrias} alt='geometrias teatreritos' />
                     </Grid>
                 </Grid>
             </Box>
-            <Box className={classes.secondaryContainer} p={10}>
+            <Box className={classes.secondaryContainer} p={{md: 10, xs: 2}} >
                 <Grid container justify='center' alignItems='center'>
                     <Grid item xs={12} md={6}>
                         <Typography className={classes.blueType} variant='h4' align='center'>Los Teatreritos de hoy mañana serán nominados...</Typography>

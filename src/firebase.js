@@ -21,7 +21,15 @@ export const storage = firebase.storage()
 export const storageRef = storage.ref()
 export { firebase }
 
-export const getVideos = async any => {
-  let [primary, secondary] = await Promise.all([db.doc('videos/primary').get(), db.doc('videos/secondary').get()])
-  return {primary: primary.data(), secondary: secondary.data()}
+export const get = async any => {
+  let [primary, secondary, channel] = await Promise.all([
+    db.doc('videos/primary').get(), 
+    db.doc('videos/secondary').get(),
+    db.doc('videos/channel').get(),
+  ])
+  return {primary: primary.data(), secondary: secondary.data(), channel: channel.data()}
+}
+
+export default {
+  get,
 }

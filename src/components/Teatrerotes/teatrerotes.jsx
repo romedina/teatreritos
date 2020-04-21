@@ -10,12 +10,12 @@ export const Teatrerotes = () => {
 
     return (
         <React.Fragment>
-            <Box p={10} className={classes.mainContainer}>
+            <Box p={{md: 10, xs: 3}} className={classes.mainContainer}>
                 <div className={classes.pattern}>
                     <Grid container justify='center' alignItems='center'>
-                        <Grid item xs={10} md={6}>
+                        <Grid item xs={12} md={6}>
                             <Typography className={classes.darkBluefont} align='center' variant='h3'>Los Teatrerotes</Typography>
-                            <Box className={classes.blueContainer} p={8}>
+                            <Box className={classes.blueContainer} p={{md: 8, xs: 3}}>
                                 <Typography className={classes.whiteFont} gutterBottom>
                                     Gelys y Fofo son actores, bailarines y cantantes profesionales
                                     de toda la vida. Desarrollar el espíritu artístico y humano en
