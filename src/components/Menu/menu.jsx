@@ -48,6 +48,9 @@ const Content = styled('nav')({
   top: '220px',
   position: 'absolute',
   zIndex: 20,
+  '@media (max-width: 600px)': {
+    display: 'none'
+  }
 })
 
 const Item = styled('a')({
