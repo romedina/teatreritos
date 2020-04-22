@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { styled } from '@material-ui/core/styles'
 import { Fade } from '@material-ui/core'
+
 const Menu = props => {
   const [selected, setSelected] = useState('home')
   const [fixed, setFixed] = useState(false)
@@ -8,7 +9,6 @@ const Menu = props => {
   useEffect(() => {
     const handleScroll = () => {
       var scrolled = window.scrollY
-      console.log(scrolled)
       if (scrolled > 200 && !fixed) {
         setFixed(true)
         console.log('set')
@@ -23,9 +23,33 @@ const Menu = props => {
 
   const position = {
     position: fixed ? 'fixed' : 'absolute',
-    top: fixed ? '10px' : '200px'
+    top: fixed ? '10px' : '200px',
   }
   
+  // update menu selected
+  useEffect(() => {
+    const handleScrollSet = () => {
+      var scrolled = window.scrollY
+      if (scrolled < 624 && selected !== 'home'){
+        console.log('set_selected1')
+        setSelected('home')
+      }
+      if (scrolled > 624 && scrolled < 2326 && selected !== 'be'){
+        console.log('set_selected2')
+        setSelected('be')
+      }
+      if (scrolled > 2326 && scrolled < 3369 && selected !== 'academia'){
+        console.log('set_selected3')
+        setSelected('academia')
+      }
+      if (scrolled > 3369 && selected !== 'classes'){
+        console.log('set_selected4')
+        setSelected('classes')
+      }
+    }
+    window.addEventListener('scroll', handleScrollSet)
+    return () => window.removeEventListener('scroll', handleScrollSet)
+  }, [selected])
   
 
   return (
