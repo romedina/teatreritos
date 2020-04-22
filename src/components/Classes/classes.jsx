@@ -10,13 +10,13 @@ const Classes = props => {
           <TypographyStyled variant='h3' align='center' >Clases</TypographyStyled>
         </Grid>
         <Grid item xs={10} sm={5} >
-          <ButtonPrimary>Teatrerito ruiseñor</ButtonPrimary>
+          <ButtonPrimary onClick={e => window.location.href = 'mailto:hola@teatreritos.com'}>Teatrerito ruiseñor</ButtonPrimary>
           <p>
             Clases de canto personalizadas por mensaje directo.
           </p>
         </Grid>
         <Grid item xs={10} sm={5}>
-          <ButtonSecondary>Teatrerito saltimbanqui</ButtonSecondary>
+          <ButtonSecondary onClick={e => window.location.href = 'mailto:hola@teatreritos.com'}>Teatrerito saltimbanqui</ButtonSecondary>
           <p>
             Clases de danza personalizadas por mensaje directo.
           </p>
