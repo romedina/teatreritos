@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@material-ui/core/styles'
 import { Grid } from '@material-ui/core'
-
+import { ButtonBase } from '@material-ui/core'
 
 const VideoList = props => {
   if (!props.data) return null
@@ -33,9 +33,15 @@ const GridContent = styled(Grid)({
   
 })
 
-const More = styled('a')({
-  color: '#fff',
-  fontSize: '1.2em'
+const More = styled(ButtonBase)({
+  border: "1px solid #fff",
+  color: "#fff",
+  fontSize: "1.2em",
+  width: "150px",
+  textAlign: "center",
+  padding: "7px",
+  borderRadius: "5px",
+  marginTop: "50px"
 })
 
 const VideoContent = styled(Grid)({

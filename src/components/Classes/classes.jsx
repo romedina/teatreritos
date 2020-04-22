@@ -26,7 +26,7 @@ const Classes = props => {
   )
 }
 const Container = styled('div')({
-  padding: '40px',
+  padding: ' 100px 40px',
   background: '#db3832',
   '& p': {
     display: 'block',

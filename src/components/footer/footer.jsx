@@ -21,11 +21,11 @@ const Footer = props => {
 }
 
 const Content = styled('div')({
-  padding: '30px',
+  padding: '100px 30px',
 })
 
 const IconsContent = styled('div')({
-  marginTop: '20px',
+  margin: '30px auto',
   display: 'flex',
   justifyContent: 'center',
   alignContent: 'center',

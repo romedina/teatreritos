@@ -39,7 +39,7 @@ export const BeOrNotBe = () => {
 
     return (
         <React.Fragment>
-            <Box className={classes.container} pt={5} id='be'>
+            <Box className={classes.container} p={{xs: 2, md: 10}} id='be'>
                 <Grid container justify='center' alignItems='center'>
 
 

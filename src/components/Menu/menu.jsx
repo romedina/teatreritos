@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { styled } from '@material-ui/core/styles'
 import { Fade } from '@material-ui/core'
+import { Link } from 'react-scroll'
 
 const Menu = props => {
   const [selected, setSelected] = useState('home')
@@ -11,10 +12,8 @@ const Menu = props => {
       var scrolled = window.scrollY
       if (scrolled > 200 && !fixed) {
         setFixed(true)
-        console.log('set')
       } else if (scrolled < 200 && !!fixed) {
         setFixed(false)
-        console.log('set__')
       }
     }
     window.addEventListener('scroll', handleScroll)
@@ -23,48 +22,25 @@ const Menu = props => {
 
   const position = {
     position: fixed ? 'fixed' : 'absolute',
-    top: fixed ? '10px' : '200px',
+    top: fixed ? '0' : '200px',
+    background: fixed ? '#fff' : ''
   }
-  
-  // update menu selected
-  useEffect(() => {
-    const handleScrollSet = () => {
-      var scrolled = window.scrollY
-      if (scrolled < 624 && selected !== 'home'){
-        console.log('set_selected1')
-        setSelected('home')
-      }
-      if (scrolled > 624 && scrolled < 2326 && selected !== 'be'){
-        console.log('set_selected2')
-        setSelected('be')
-      }
-      if (scrolled > 2326 && scrolled < 3369 && selected !== 'academia'){
-        console.log('set_selected3')
-        setSelected('academia')
-      }
-      if (scrolled > 3369 && selected !== 'classes'){
-        console.log('set_selected4')
-        setSelected('classes')
-      }
-    }
-    window.addEventListener('scroll', handleScrollSet)
-    return () => window.removeEventListener('scroll', handleScrollSet)
-  }, [selected])
   
 
   return (
-    <Fade in={true} timeout={8000}>
+    <Fade in={true} timeout={5000}>
     <Content style={position}>
-      <Item onClick={e => setSelected('home')} selected={selected === 'home'} href='#home'>Inicio</Item>
-      <Item onClick={e => setSelected('be')} selected={selected === 'be'} href='#be'>Ser o no ser Teatrerito</Item>
-      <Item onClick={e => setSelected('academia')} selected={selected === 'academia'} href='#academia'>Nuestra academia</Item>
-      <Item onClick={e => setSelected('classes')} selected={selected === 'classes'} href='#classes'>Clases</Item>
+      <Item onSetActive={e => setSelected('home')} hashSpy={true} spy={true} smooth={true} selected={selected === 'home'} to='home'>Inicio</Item>
+      <Item onSetActive={e => setSelected('be')} hashSpy={true} spy={true} smooth={true} selected={selected === 'be'} to='be'>Ser o no ser Teatrerito</Item>
+      <Item onSetActive={e => setSelected('academia')} hashSpy={true} spy={true} smooth={true} selected={selected === 'academia'} to='academia'>Nuestra academia</Item>
+      <Item onSetActive={e => setSelected('classes')} hashSpy={true} spy={true} smooth={true} selected={selected === 'classes'} to='classes'>Clases</Item>
     </Content>
     </Fade>
   )
 }
 
 const Content = styled('nav')({
+  padding: '10px 0px',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -77,14 +53,15 @@ const Content = styled('nav')({
   }
 })
 
-const Item = styled('a')({
+const Item = styled(Link)({
   fontWeight: 'bold',
   color: props => props.selected ? '#fff' : '#016ea6',
   background: props => props.selected ? '#ffc808' : '',
   marginRight: '20px',
   padding: '7px',
   borderRadius: '5px',
-  textDecoration: 'none'
+  textDecoration: 'none',
+  cursor: 'pointer'
 
 })
 
