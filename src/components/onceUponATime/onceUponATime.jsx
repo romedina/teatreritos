@@ -6,9 +6,9 @@ import VideoList from './videloList'
 const OnceUponATime = props => {
   return (
     <Content id='academia'> 
-      <TypographyWhite align='center'>Nuestra academia</TypographyWhite>
-      <TypographyTitle align='center'>ERASE UNA VEZ...</TypographyTitle>
-      <TypographySecondary align='center'>(Transmisión en vivo)</TypographySecondary>
+      <TypographyWhite variant='h2' align='center'>Nuestra academia</TypographyWhite>
+      <TypographyTitle variant='h2' align='center'>ÉRASE UNA VEZ...</TypographyTitle>
+      <TypographySecondary variant='h2' align='center'>(Transmisión en vivo)</TypographySecondary>
       <Text>
         Cada semana un narrador llevará a los teatreritos –sin dejar su hogar– a recorrer lugares
         fantásticos mientras recrean historias emocionantes dando vida a diferentes personajes que
@@ -29,16 +29,19 @@ const Content = styled('div')({
 
 const TypographyWhite = styled(Typography)({
   color: '#fff',
-  fontSize: '2em'
+  fontSize: '2em',
+  fontFamily: 'Baloo Paaji 2, cursive!important'
 })
 
 const TypographyTitle = styled(Typography)({
   fontSize: '2.8em',
-  color: '#f8c033'
+  color: '#f8c033',
+  fontFamily: 'Baloo Paaji 2, cursive!important'
 })
 const TypographySecondary = styled(Typography)({
   fontSize: '1.6em',
-  color: '#f8c033'
+  color: '#f8c033',
+  fontFamily: 'Baloo Paaji 2, cursive!important'
 })
 
 const Text = styled('p')({

@@ -11,11 +11,11 @@ const Footer = props => {
     <Content>
       <Picture src={logo} />
       <IconsContent>
-        <FacebookIcon />
-        <YouTubeIcon />
+        <FacebookIcon  onClick={e => window.location.href = 'https://www.facebook.com/soyteatrerito'}/>
+        <YouTubeIcon onClick={e => window.location.href='https://www.youtube.com/channel/UCxaGszT8zhUavuQKbLhptoQ'}/>
         <InstagramIcon />
       </IconsContent>
-      <TypographyStyled>Hola@teatreritos</TypographyStyled>
+      <TypographyStyled>Hola@teatreritos.com</TypographyStyled>
     </Content>
   )
 }
@@ -30,6 +30,7 @@ const IconsContent = styled('div')({
   justifyContent: 'center',
   alignContent: 'center',
   '& svg': {
+    cursor: 'pointer',
     color: '#fff',
     fontSize: '3em',
     marginRight: '15px',

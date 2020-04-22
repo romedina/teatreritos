@@ -23,9 +23,9 @@ const Menu = props => {
   const position = {
     position: fixed ? 'fixed' : 'absolute',
     top: fixed ? '0' : '200px',
-    background: fixed ? '#fff' : ''
+    background: fixed ? '#fff' : '',
+    boxShadow: fixed ? '1px 1px 2px gray' : ''
   }
-  
 
   return (
     <Fade in={true} timeout={5000}>
