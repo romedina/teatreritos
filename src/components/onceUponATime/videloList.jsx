@@ -8,19 +8,27 @@ const VideoList = props => {
   
   return (
     <GridContent container justify='center' alignItems='center' spacing={2}>
-      <VideoContent item xs={12} md={4}>
-        <div dangerouslySetInnerHTML={{__html: props.data[props.section][1] }} />
-        <Title>{props.data[props.section].titulo_1}</Title>
-      </VideoContent>
-      <VideoContent item xs={12} md={4}>
-        <div dangerouslySetInnerHTML={{__html: props.data[props.section][2] }} />
-        <Title>{props.data[props.section].titulo_2}</Title>
-      </VideoContent>
-      <VideoContent item xs={12} md={4} >
-        <div dangerouslySetInnerHTML={{__html: props.data[props.section][3] }} />
-        <Title>{props.data[props.section].titulo_3}</Title>
-      </VideoContent>
-      <More href={props.data.channel.url}>Ver mas...</More>
+      {props.data[props.section][1] && props.data[props.section].titulo_1 && (
+        <VideoContent item xs={12} md={4}>
+          <div dangerouslySetInnerHTML={{__html: props.data[props.section][1] }} />
+          <Title>{props.data[props.section].titulo_1}</Title>
+        </VideoContent>
+      )}
+      {props.data[props.section][2] && props.data[props.section].titulo_2 && (
+        <VideoContent item xs={12} md={4}>
+          <div dangerouslySetInnerHTML={{__html: props.data[props.section][2] }} />
+          <Title>{props.data[props.section].titulo_2}</Title>
+        </VideoContent>
+      )}
+      {props.data[props.section][3] && props.data[props.section].titulo_3 && (
+        <VideoContent item xs={12} md={4}>
+          <div dangerouslySetInnerHTML={{__html: props.data[props.section][3] }} />
+          <Title>{props.data[props.section].titulo_3}</Title>
+        </VideoContent>
+      )}
+      <MoreCOntent>
+        <More href={props.data.channel.url}>Ver mas...</More>
+      </MoreCOntent>
     </GridContent>
   )
 }
@@ -33,7 +41,13 @@ const GridContent = styled(Grid)({
   
 })
 
+const MoreCOntent = styled('div')({
+  width: '100%'
+})
+
 const More = styled(ButtonBase)({
+  margin: 'auto',
+  display: 'block',
   border: "1px solid #fff",
   color: "#fff",
   fontSize: "1.2em",
