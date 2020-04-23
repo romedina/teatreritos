@@ -11,11 +11,11 @@ const Footer = props => {
     <Content>
       <Picture src={logo} />
       <IconsContent>
-        <FacebookIcon  onClick={e => window.location.href = 'https://www.facebook.com/soyteatrerito'}/>
+        <FacebookIcon onClick={e => window.location.href = 'https://www.facebook.com/soyteatrerito'}/>
         <YouTubeIcon onClick={e => window.location.href='https://www.youtube.com/channel/UCxaGszT8zhUavuQKbLhptoQ'}/>
-        <InstagramIcon />
+        <InstagramIcon onClick={e => window.location.href="https://www.instagram.com/soyteatrerito/?hl=es-la"} />
       </IconsContent>
-      <TypographyStyled>Hola@teatreritos.com</TypographyStyled>
+      <TypographyStyled onClick={e => window.location.href="mailto:hola@teatreritos.com"}>Hola@teatreritos.com</TypographyStyled>
     </Content>
   )
 }
@@ -36,6 +36,10 @@ const IconsContent = styled('div')({
     marginRight: '15px',
     '&:last-of-type': {
       marginRight: '0px'
+    },
+    transition: 'all 0.5s',
+    '&:hover': {
+      transform: 'scale(1.2)'
     }
   }
 })
@@ -49,7 +53,12 @@ const TypographyStyled = styled(Typography)({
   color: '#29a2d9',
   textAlign: 'center',
   fontSize: '2em',
-  marginTop: '20px'
+  marginTop: '20px',
+  cursor: 'pointer',
+  transition: 'all 0.5s',
+  '&:hover': {
+    transform: 'scale(1.05)'
+  }
 })
 
 export default Footer

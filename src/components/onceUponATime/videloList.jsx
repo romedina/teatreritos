@@ -28,7 +28,7 @@ const VideoList = props => {
       )}
       {props.data[props.section][3] && props.data[props.section][2] && props.data[props.section][1] && (
         <MoreCOntent>
-          <More href={props.data.channel.url}>Ver mas...</More>
+          <More href={props.data.channel.url}>Ver más...</More>
         </MoreCOntent>
       )}
     </GridContent>
