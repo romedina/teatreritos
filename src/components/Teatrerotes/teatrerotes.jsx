@@ -26,7 +26,7 @@ export const Teatrerotes = () => {
                                 Studio.
                             </Typography>
                                 <Typography className={classes.whiteFont} gutterBottom>
-                                    Como parte de sus experiencia han realizado montajes teatrales de
+                                    Como parte de sus experiencia han participado en montajes teatrales de
                                     gran formato para niños como Paw Patrol, My Little Pony,
                                     Peppa Pig, Monster High, Pica Pica y Trepsi, entre otros.
                             </Typography>
