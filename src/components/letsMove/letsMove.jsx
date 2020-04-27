@@ -6,7 +6,7 @@ import VideoList from '../onceUponATime/videloList'
 const OnceUponATime = props => {
   return (
     <Content>
-      <TypographyWhite align='center'>¡Teatreritos a moverse!</TypographyWhite>
+      <TypographyWhite variant='h3' align='center'>¡Teatreritos a moverse!</TypographyWhite>
       <Text>
       Semanalmente los teatreritos montarán una coreografía que enriquecerá sus habilidades de baile,
       retención, coordinación y dominio del escenario. Su cuerpo desarrollará fuerza, elasticidad, agilidad, memoria y actitud.
@@ -19,7 +19,7 @@ const OnceUponATime = props => {
 const Content = styled('div')({
   background: '#ff6b00',
   padding: '50px',
-  ['@media (max-width:400px)']: {
+  '@media (max-width:400px)': {
     padding: '50px 15px',
   }
 })
@@ -35,6 +35,6 @@ const Text = styled('p')({
   textAlign: 'center',
   maxWidth: '700px',
   margin: 'auto',
-  padding: '20px 0px',
+  padding: '50px 0px',
 })
 export default OnceUponATime

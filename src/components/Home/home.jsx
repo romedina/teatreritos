@@ -32,7 +32,7 @@ export const Home = () => {
             <img className={classes.logoImg} src={`${logo}`} alt="telon izquiedo" />
           </div>
           <div className={classes.top}>
-            <img className={classes.topImg} src={`${top}`} alt="telon izquiedo" />
+            
           </div>
           <div className={classes.left}>
             <img className={classes.leftImg} src={`${left}`} alt="telon izquiedo" />

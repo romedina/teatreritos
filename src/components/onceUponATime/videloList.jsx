@@ -26,11 +26,11 @@ const VideoList = props => {
           <Title>{props.data[props.section].titulo_3}</Title>
         </VideoContent>
       )}
-      {props.data[props.section][3] && props.data[props.section][2] && props.data[props.section][1] && (
+      {/* {props.data[props.section][3] && props.data[props.section][2] && props.data[props.section][1] && (
         <MoreCOntent>
           <More href={props.data.channel.url}>Ver más...</More>
         </MoreCOntent>
-      )}
+      )} */}
     </GridContent>
   )
 }

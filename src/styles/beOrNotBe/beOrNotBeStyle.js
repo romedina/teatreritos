@@ -9,6 +9,7 @@ export const beOrNotBeStyles ={
     },
     orangeType:{
         color: CS.orange,
+        fontWeight: 'bold',
     },
     darkOrangeType:{
         color: CS.darkOrange,

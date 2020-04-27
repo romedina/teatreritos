@@ -9,7 +9,8 @@ export const teatrerotesStyles = {
         backgroundColor:CS.lightBlue,
     },
     whiteFont:{
-        color:CS.white
+        color:CS.white,
+        marginBottom: '30px'
     },
     darkBluefont:{
         color: CS.darkBlue,

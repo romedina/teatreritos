@@ -31,7 +31,7 @@ const Menu = props => {
     <Fade in={true} timeout={5000}>
     <Content style={position}>
       <Item onSetActive={e => setSelected('home')} hashSpy={true} spy={true} smooth={true} selected={selected === 'home'} to='home'>Inicio</Item>
-      <Item onSetActive={e => setSelected('be')} hashSpy={true} spy={true} smooth={true} selected={selected === 'be'} to='be'>Ser o no ser Teatrerito</Item>
+      <Item onSetActive={e => setSelected('be')} hashSpy={true} spy={true} smooth={true} selected={selected === 'be'} to='be'>Ser teatrerito o no ser</Item>
       <Item onSetActive={e => setSelected('academia')} hashSpy={true} spy={true} smooth={true} selected={selected === 'academia'} to='academia'>Nuestra academia</Item>
       <Item onSetActive={e => setSelected('classes')} hashSpy={true} spy={true} smooth={true} selected={selected === 'classes'} to='classes'>Clases</Item>
     </Content>

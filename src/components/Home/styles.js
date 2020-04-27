@@ -1,5 +1,6 @@
 import pattern from '../../assets/pattern-somos.svg';
 import * as CS from '../../styles/colorSystem/colorSystem';
+import top from '../../assets/test.png';
 
 const homeStyles = {
     back:{
@@ -24,20 +25,26 @@ const homeStyles = {
 
     },
     '@keyframes showBegins': {
-        '0%': { transform: 'translateY(700px)' },
+        '0%': { transform: 'translateY(90vh)' },
         '100%': { transform: 'translateY(0px)' },
     },
+
     topImg:{
-        height: 'auto',
+        height: '100%',
     },
     top:{
+        backgroundImage: `url('${top}')`,
         position:'absolute',
         overflow:'hidden',
-        top:-700,
+        top:'-90vh',
         animation:'$showBegins 2.5s',
         left: 0,
         right: 0,
         margin: 'auto',
+        height: '100vh',
+        backgroundPosition: "bottom",
+        backgroundRepeatX: "repeat",
+        backgroundSize: 'cover'
     },
     floorImg:{
         width:'100%',

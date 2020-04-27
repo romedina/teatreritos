@@ -45,11 +45,11 @@ const TypographySecondary = styled(Typography)({
 })
 
 const Text = styled('p')({
+  color: '#0daeb6',
   fontSize: '1.2em',
-  color: '#fff',
   textAlign: 'center',
   maxWidth: '700px',
   margin: 'auto',
-  padding: '20px 0px',
+  padding: '50px 0px',
 })
 export default OnceUponATime
