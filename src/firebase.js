@@ -30,6 +30,17 @@ export const get = async any => {
   return {primary: primary.data(), secondary: secondary.data(), channel: channel.data()}
 }
 
+export const addMessage  = async data => {
+  const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+  const date = new Date()
+  const collection = `contact/date/${date.getDate()}-${months[date.getMonth()]}-${date.getFullYear()}`
+  data.date = date
+  data.isViewed = false
+  const status = await db.collection(collection).add(data)
+  return status
+}
+
 export default {
   get,
+  addMessage,
 }

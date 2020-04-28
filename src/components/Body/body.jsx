@@ -10,13 +10,16 @@ import Classes from '../Classes/classes'
 import Footer from '../footer/footer'
 import firebase from '../../firebase'
 import Menu from '../Menu/menu'
+import Contact from '../contact'
 
 const useStyles = makeStyles(bodyStyle);
 
 export const Body = () => {
     const classes = useStyles();
     const [data, setData] = useState(null)
+    const [isModalContactActive, setModalContactActive] = useState(false)
     
+
     // fetch data 
     useEffect(() => {
         firebase.get().then(data => setData(data))
@@ -24,7 +27,13 @@ export const Body = () => {
 
     return (
         <React.Fragment>
-            <Menu />
+            <Menu 
+                activeModalContact={ event => setModalContactActive(true)}
+            />
+            <Contact 
+                open={isModalContactActive}
+                onClose={event => setModalContactActive(false)}
+            />
             <Grid
                 className={classes.container}
                 container
