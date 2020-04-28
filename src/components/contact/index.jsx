@@ -115,6 +115,9 @@ const Body = styled('div')({
   justifyContent: 'center',
   alignItems: 'center',
   boxSizing: 'border-box',
+  '@media (max-width:400px)': {
+    padding: '20px',
+  }
 })
 
 const ModalStyled = styled(Modal)({

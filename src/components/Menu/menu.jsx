@@ -6,6 +6,7 @@ import { Link } from 'react-scroll'
 const Menu = props => {
   const [selected, setSelected] = useState('home')
   const [fixed, setFixed] = useState(false)
+  const [fixedMobile, setFixedMobile] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +21,21 @@ const Menu = props => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [fixed])
 
+  // set position mobile
+  useEffect(() => {
+    const handleScroll = () => {
+      var scrolled = window.scrollY
+      if (scrolled > 130 && !fixedMobile) {
+        setFixedMobile(true)
+      } else if (scrolled < 130 && !!fixedMobile) {
+        setFixedMobile(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [fixedMobile])
+
+
   const position = {
     position: fixed ? 'fixed' : 'absolute',
     top: fixed ? '0' : '200px',
@@ -27,15 +43,25 @@ const Menu = props => {
     boxShadow: fixed ? '1px 1px 2px gray' : ''
   }
 
+  const positionMobile = {
+    position: fixedMobile ? 'fixed' : 'absolute',
+    top: fixedMobile ? '10px' : '150px',
+  }
+
   return (
     <Fade in={true} timeout={5000}>
-    <Content style={position}>
-      <Item onSetActive={e => setSelected('home')} hashSpy={true} spy={true} smooth={true} selected={selected === 'home'} to='home'>Inicio</Item>
-      <Item onSetActive={e => setSelected('be')} hashSpy={true} spy={true} smooth={true} selected={selected === 'be'} to='be'>Ser teatrerito o no ser</Item>
-      <Item onSetActive={e => setSelected('academia')} hashSpy={true} spy={true} smooth={true} selected={selected === 'academia'} to='academia'>Nuestra academia</Item>
-      <Item onSetActive={e => setSelected('classes')} hashSpy={true} spy={true} smooth={true} selected={selected === 'classes'} to='classes'>Clases</Item>
-      <Item onClick={props.activeModalContact} selected={selected === 'contact'} to='contact'>Contactanos</Item>
-    </Content>
+     <div>
+     <Content style={position}>
+        <Item onSetActive={e => setSelected('home')} hashSpy={true} spy={true} smooth={true} selected={selected === 'home'} to='home'>Inicio</Item>
+        <Item onSetActive={e => setSelected('be')} hashSpy={true} spy={true} smooth={true} selected={selected === 'be'} to='be'>Ser teatrerito o no ser</Item>
+        <Item onSetActive={e => setSelected('academia')} hashSpy={true} spy={true} smooth={true} selected={selected === 'academia'} to='academia'>Nuestra academia</Item>
+        <Item onSetActive={e => setSelected('classes')} hashSpy={true} spy={true} smooth={true} selected={selected === 'classes'} to='classes'>Clases</Item>
+        <Item onClick={props.activeModalContact} selected={selected === 'contact'} to='contact'>Contactanos</Item>
+      </Content>
+      <ContentMobile style={positionMobile}>
+        <Item onClick={props.activeModalContact} selected={selected === 'contact'} to='contact'>Contactanos</Item>
+      </ContentMobile>
+     </div>
     </Fade>
   )
 }
@@ -49,8 +75,29 @@ const Content = styled('nav')({
   top: '220px',
   position: 'absolute',
   zIndex: 20,
-  '@media (max-width: 600px)': {
+  '@media (max-width:600px)': {
     display: 'none'
+  }
+})
+
+const ContentMobile = styled('nav')({
+  padding: '10px 0px',
+  justifyContent: 'center',
+  alignItems: 'center',
+  top: '150px',
+  position: 'fixed',
+  background: '#fff',
+  margin: 'auto',
+  left: 0,
+  right: 0,
+  width: '120px',
+  textAlign: 'center',
+  zIndex: 20,
+  display: 'none',
+  boxShadow: '2px 2px 3px #000',
+  '@media (max-width:600px)': {
+    display: 'flex',
+    borderRadius: '5px',
   }
 })
 
@@ -62,8 +109,14 @@ const Item = styled(Link)({
   padding: '7px',
   borderRadius: '5px',
   textDecoration: 'none',
-  cursor: 'pointer'
-
+  cursor: 'pointer',
+  '&:last-of-type': {
+    marginRight: '0px'
+  },
+  '@media (max-width:600px)': {
+    padding: '0px',
+  }
 })
+
 
 export default Menu
