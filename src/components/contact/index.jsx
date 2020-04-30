@@ -147,7 +147,9 @@ const InputFake = styled('div')({
   borderRadius: '5px',
   marginTop: '5px',
   overflow: 'hidden',
-  paddingLeft: '10px'
+  paddingLeft: '10px',
+  height: '37px',
+  boxSizing: 'border-box'
 })
 
 const Icon = styled('img')({
@@ -160,7 +162,9 @@ const Input = styled('input')({
   width: "100%",
   border: "none",
   padding: "11px",
-  outline: "none"
+  outline: "none",
+  height: '37px',
+  boxSizing: 'border-box'
 })
 
 const Button = styled(ButtonBase)({
