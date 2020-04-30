@@ -56,10 +56,10 @@ const Menu = props => {
         <Item onSetActive={e => setSelected('be')} hashSpy={true} spy={true} smooth={true} selected={selected === 'be'} to='be'>Ser teatrerito o no ser</Item>
         <Item onSetActive={e => setSelected('academia')} hashSpy={true} spy={true} smooth={true} selected={selected === 'academia'} to='academia'>Nuestra academia</Item>
         <Item onSetActive={e => setSelected('classes')} hashSpy={true} spy={true} smooth={true} selected={selected === 'classes'} to='classes'>Clases</Item>
-        <Item onClick={props.activeModalContact} selected={selected === 'contact'} to='contact'>Contactanos</Item>
+        <Item onClick={props.activeModalContact} selected={selected === 'contact'} to='contact'>Contáctanos</Item>
       </Content>
       <ContentMobile style={positionMobile}>
-        <Item onClick={props.activeModalContact} selected={selected === 'contact'} to='contact'>Contactanos</Item>
+        <Item onClick={props.activeModalContact} selected={selected === 'contact'} to='contact'>Contáctanos</Item>
       </ContentMobile>
      </div>
     </Fade>
