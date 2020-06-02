@@ -1,13 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import styles from './styles';
-import top from '../../assets/closed.png';
 import left from '../../assets/izquierda.png';
 import right from '../../assets/derecha.png';
 import floor from '../../assets/floor.png';
 import boy from '../../assets/boy.png';
 import girl from '../../assets/girl.png';
-import logo from '../../assets/whiteLogo.png';
+import logo from '../../assets/teatreritos.png';
 
 const useStyles = makeStyles(styles);
 

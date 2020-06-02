@@ -132,6 +132,7 @@ const homeStyles = {
         width:'20%'
     },
     logoImg:{
+        width: '350px',
         animation:'$logoIntro 1s ease 1.6s',
         position:'absolute',
         animationFillMode: 'both',
