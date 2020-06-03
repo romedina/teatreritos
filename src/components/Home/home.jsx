@@ -6,7 +6,7 @@ import right from '../../assets/derecha.png';
 import floor from '../../assets/floor.png';
 import boy from '../../assets/boy.png';
 import girl from '../../assets/girl.png';
-import logo from '../../assets/teatreritos.png';
+import logo from '../../assets/logo.svg';
 
 const useStyles = makeStyles(styles);
 

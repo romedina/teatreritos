@@ -58,6 +58,9 @@ const TypographyStyled = styled(Typography)({
   transition: 'all 0.5s',
   '&:hover': {
     transform: 'scale(1.05)'
+  },
+  '@media (max-width:500px)': {
+    fontSize: '1.6em',
   }
 })
 
