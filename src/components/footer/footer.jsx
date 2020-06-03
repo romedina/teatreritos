@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@material-ui/core/styles'
-import logo from '../../assets/whiteLogo.png';
+import logo from '../../assets/logo.svg';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -47,7 +47,8 @@ const IconsContent = styled('div')({
 const Picture = styled('img')({
   display: 'block',
   margin: 'auto',
-  maxWidth: '90%'
+  maxWidth: '400px',
+  width: '90%'
 })
 const TypographyStyled = styled(Typography)({
   color: '#29a2d9',
