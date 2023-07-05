@@ -1,11 +1,12 @@
-import React from 'react';
-import {Body} from './components/Body/body';
-
+import React from "react";
+import { Body } from "./components/Body/body";
+import AdModal from "./components/AdModal";
 
 function App() {
   return (
     <div className="App">
-      <Body/>
+      <AdModal />
+      <Body />
     </div>
   );
 }
